@@ -1,0 +1,29 @@
+
+<section class="new">
+<div class="new-image">
+    <%= image_tag @siaxle.sia_image %>
+  </div>
+  <div class="data" >
+    <h3>Title: <%= @siaxle.name %></h3>
+    <h2>
+    <div class="about-title">
+      Time: <%= day_and_time(@siaxle) %>
+    </h2>
+    <p>
+    <class="about-text-title">
+    Description: <%= @siaxle.description %>
+    </p>
+
+  </div>
+</section>
+
+<section class="editdelbutton">
+  <%= link_to "შეცვლა", edit_siaxle_path(@siaxle), class: "button" %>
+  </section>
+  <section class="editdelbutton">
+  <%= link_to "წაშლა", @siaxle, class: "button",
+        data: { turbo_method: :delete, turbo_confirm: "Really?!" } %>
+</section>
+<section class="editdelbutton">
+<%= link_to "ყველა სიახლე", siaxles_path %>
+</section>

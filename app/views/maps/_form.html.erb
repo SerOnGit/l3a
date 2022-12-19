@@ -1,0 +1,12 @@
+<%= form_with(model: map) do |f| %>
+
+    <%= render "shared/errors", object: map %>
+
+    <%= f.label :numb %>
+    <%= f.text_field :numb %>
+
+    <%= f.label :sold %> 1 = Sold, 0 = Not Sold 
+    <%= f.text_field :sold %>
+  
+    <%= f.submit %>
+  <% end %>

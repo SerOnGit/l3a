@@ -1,0 +1,29 @@
+
+<section class="new">
+<div class="new-image">
+    <%= image_tag @event.eve_image %>
+  </div>
+  <div class="data" >
+    <h3>Title: <%= @event.name %></h3>
+    <h2>
+    <div class="about-title">
+      Time: <%= day_and_time(@event) %>
+    </h2>
+    <p>
+    <class="about-text-title">
+    Description: <%= @event.description %>
+    </p>
+
+  </div>
+</section>
+
+<section class="editdelbutton">
+  <%= link_to "Edit", edit_event_path(@event), class: "button" %>
+  </section>
+  <section class="editdelbutton">
+  <%= link_to "Delete", @event, class: "button",
+  data: { turbo_method: :delete, turbo_confirm: "Really?!" } %>
+</section>
+<section class="editdelbutton">
+<%= link_to "All Events", events_path %>
+</section>

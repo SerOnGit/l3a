@@ -1,0 +1,9 @@
+<%= form_with(model: photo) do |f| %>
+
+    <%= render "shared/errors", object: photo %>
+  
+    <%= f.label :pho_image %>
+    <%= f.file_field :pho_image %>
+
+    <%= f.submit %>
+  <% end %>

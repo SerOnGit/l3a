@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>L3 CONSTRACTION</title>
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<% if current_user?(@user) %> 
+
+<body>
+    <header>
+        <div class="map_header">
+        <div class="new_map_img">
+        <%= link_to image_tag(@photo.pho_image), photos_path(anchor: "images") %>
+        </div>
+        <p class="next_button">
+        <%= link_to ">", photo_path(@photos.previous(@photo)) if @photos.previous(@photo) %>
+        </p>
+        <p class="back_button"> 
+        <%= link_to "<", photo_path(@photos.next(@photo))  if @photos.next(@photo) %>
+        </p>
+    </div>
+    </header>
+
+    
+
+    
+
+    
+</body>
+
+
+
+
+
+    <% else %>
+
+    <section class="new">
+<div class="new-image">
+    <%  if @photo.pho_image.content_type =~ /video/ %>
+    <%= video_tag url_for(@photo.pho_image), :autoplay => true, :loop => true, :muted => true %>
+    <%   else %>
+    <%= image_tag @photo.pho_image %>
+    <% end %>
+  </div>
+</section>
+
+<section class="editdelbutton">
+  <%= link_to "Edit", edit_photo_path(@photo), class: "button" %>
+  </section>
+  <section class="editdelbutton">
+  <%= link_to "Delete", @photo, class: "button",
+  data: { turbo_method: :delete, turbo_confirm: "Really?!" } %>
+</section>
+<section class="editdelbutton">
+<%= link_to "All Photos", photos_path %>
+</section>
+
+
+    </div>
+    <% end %>
+
