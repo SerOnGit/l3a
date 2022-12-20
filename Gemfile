@@ -29,7 +29,7 @@ gem "net-protocol", "~> 0.1.3"
 
 gem "sshkit", "~> 1.21.3"
 gem "loofah", '~>  2.19.0'
-gem 'mysql2', "~>0.3.11"
+gem 'mysql2', '< 0.5'
 gem "timeout", "~> 0.3.0"
 
 gem "crass", "~>  1.0.6"
