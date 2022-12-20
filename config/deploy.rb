@@ -6,7 +6,7 @@ set :repo_url, "https://github.com/SerOnGit/l3a.git"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
-set :rbenv_prefix, '/usr/bin/rbenv exec'
+# set :rbenv_prefix, '/usr/bin/rbenv exec'
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
