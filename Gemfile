@@ -25,6 +25,13 @@ gem 'capistrano-rails', '~> 1.4'
 gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 
+gem "net-protocol", "~> 0.1.3"
+
+gem "loofah", '~>  2.19.0'
+
+gem "timeout", "~> 0.3.0"
+
+gem "crass", "~>  1.0.6"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
