@@ -27,6 +27,7 @@ gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 
 gem "net-protocol", "~> 0.1.3"
 
+gem "sshkit", "~> 1.21.3"
 gem "loofah", '~>  2.19.0'
 
 gem "timeout", "~> 0.3.0"
