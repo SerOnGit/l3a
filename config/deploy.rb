@@ -2,7 +2,7 @@
 lock "~> 3.17.1"
 
 set :application, "l3"
-set :repo_url, "https://github.com/SerOnGit/l3.git"
+set :repo_url, "https://github.com/SerOnGit/l3a.git"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"

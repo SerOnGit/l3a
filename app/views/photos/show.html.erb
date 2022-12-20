@@ -15,7 +15,17 @@
     <header>
         <div class="map_header">
         <div class="new_map_img">
-        <%= link_to image_tag(@photo.pho_image), photos_path(anchor: "images") %>
+        <%   if @photo.pho_image.attached? %>
+        <%  if @photo.pho_image.content_type =~ /video/ %>
+                <%= link_to video_tag(url_for(@photo.pho_image), :autoplay => true, :loop => true, :muted => true), photo_path(anchor: "images") %>
+                <%   else %>
+                <%= link_to image_tag(@photo.pho_image), photos_path(anchor: "images") %>
+            <% end %>
+        
+        <%else%>
+        <%= image_tag "placeholder.png" %>
+        <%   end %>
+
         </div>
         <p class="next_button">
         <%= link_to ">", photo_path(@photos.previous(@photo)) if @photos.previous(@photo) %>

@@ -291,6 +291,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
+  sshkit (~> 1.21.3)
   stimulus-rails
   timeout (~> 0.3.0)
   turbo-rails
