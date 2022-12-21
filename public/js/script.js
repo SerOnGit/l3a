@@ -16,7 +16,9 @@ hamburger.addEventListener("click", () => {
     loop:false,
     singleitem:true,
     video:true,
-    autoplay:5000,
+    autoplayTimeout:6000,
+    autoplay:6000,
+    autoplaySpeed:7000,
     margin:10,
     nav:true,
     responsive:{

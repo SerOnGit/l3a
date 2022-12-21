@@ -100,6 +100,10 @@ class MapsController < ApplicationController
     def edit
       @map = Map.find(params[:id])
     end
+
+    def new
+      @map = Map.new
+    end
   
     def update
       @map = Map.find(params[:id])
